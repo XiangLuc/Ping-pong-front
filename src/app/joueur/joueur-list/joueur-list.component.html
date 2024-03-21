@@ -2,18 +2,21 @@
     <h1>Liste joueurs :</h1>
 </div>
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mt-3">
     <div *ngFor="let joueur of joueurs" class="m-3">
         <p>_id: {{ joueur._id }}</p>
         <p>Nom: {{ joueur.nom }}</p>
         <p>Prénom: {{ joueur.prenom }}</p>
-        <p>Point: {{ joueur.point }}</p>
-        <p>Sexe: {{ joueur.sexe }}</p>
         <p>Catégorie:</p>
         <ul>
-            <li *ngFor="let cat of joueur.categorie">
-                Age: {{ cat.age }}, Niveau: {{ cat.niveau }}
+            <li>
+                Age: {{ joueur.categorie[0].age }}
+            </li>
+            <li>
+                Niveau: {{ joueur.categorie[1].niveau }}
             </li>
         </ul>
+        <p>Sexe: {{ joueur.sexe }}</p>
+        <p>Point: {{ joueur.point }}</p>
     </div>
 </div>

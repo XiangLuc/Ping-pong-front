@@ -18,13 +18,13 @@ export class JoueurListComponent implements OnInit {
 
   ngOnInit(): void {
    this.getAllJoueurs();
+   console.log(this.joueurs)
   }
 
   getAllJoueurs() {
     this.joueurService.getAllJoueurs().subscribe(
       (joueurs:any) => {
         this.joueurs = joueurs;
-        console.log(joueurs)
       }
     )
   }
