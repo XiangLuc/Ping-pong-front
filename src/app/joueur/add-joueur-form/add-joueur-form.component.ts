@@ -1,11 +1,9 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-joueur-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [],
   templateUrl: './add-joueur-form.component.html',
   styleUrl: './add-joueur-form.component.css'
 })
