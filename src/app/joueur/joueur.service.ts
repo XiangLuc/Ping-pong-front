@@ -14,8 +14,8 @@ export class JoueurService {
     return this.httpClient.get<Joueur[]>('http://127.0.0.1:5000/joueurs');
   }
 
-  addJoueur(joueurData: any) {
-    return this.httpClient.post<any>('http://127.0.0.1:5000/joueurs', joueurData);
+  addJoueur(joueur: Joueur) {
+    return this.httpClient.post<Joueur>('http://127.0.0.1:5000/joueurs/add', joueur);
   }
   
 }
