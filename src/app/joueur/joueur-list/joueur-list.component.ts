@@ -1,6 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { JoueurService } from '../../joueur.service';
+import { JoueurService } from '../joueur.service';
+import { Joueur } from '../model/Joueur';
 
 @Component({
   selector: 'app-joueur-list',
@@ -11,16 +12,15 @@ import { JoueurService } from '../../joueur.service';
 })
 export class JoueurListComponent implements OnInit {
 
-
   constructor(private joueurService: JoueurService) {}
 
-  joueurs: any = [];
+  joueurs: Joueur[] = [];
 
   ngOnInit(): void {
-   this.fetchJoueurs();
+   this.getAllJoueurs();
   }
 
-  fetchJoueurs() {
+  getAllJoueurs() {
     this.joueurService.getAllJoueurs().subscribe(
       (joueurs:any) => {
         this.joueurs = joueurs;

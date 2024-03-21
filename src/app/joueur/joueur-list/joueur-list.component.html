@@ -8,6 +8,12 @@
         <p>Nom: {{ joueur.nom }}</p>
         <p>Prénom: {{ joueur.prenom }}</p>
         <p>Point: {{ joueur.point }}</p>
-        <p>Catégorie: {{ joueur.categorie[0] }}</p>
+        <p>Sexe: {{ joueur.sexe }}</p>
+        <p>Catégorie:</p>
+        <ul>
+            <li *ngFor="let cat of joueur.categorie">
+                Age: {{ cat.age }}, Niveau: {{ cat.niveau }}
+            </li>
+        </ul>
     </div>
 </div>
