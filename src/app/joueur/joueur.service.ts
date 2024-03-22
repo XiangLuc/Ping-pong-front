@@ -10,12 +10,20 @@ export class JoueurService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getCountJoueurs() {
+    return this.httpClient.get<any>('http://127.0.0.1:5000/joueurs/count');
+  }
+
   getAllJoueurs(): Observable<Joueur[]> {
     return this.httpClient.get<Joueur[]>('http://127.0.0.1:5000/joueurs');
   }
 
   addJoueur(joueurJSON: JSON) {
     return this.httpClient.post<JSON>('http://127.0.0.1:5000/joueurs/add', joueurJSON);
+  }
+
+  getJoueurById(id: string) {
+    return this.httpClient.get<Joueur>(`http://127.0.0.1:5000/joueurs/${id}`);
   }
   
 }

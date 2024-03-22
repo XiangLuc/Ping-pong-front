@@ -6,5 +6,5 @@ import { DetailsJoueurComponent } from './joueur/details-joueur/details-joueur.c
 export const routes: Routes = [
     { path: 'liste_joueurs', component: JoueurListComponent },
     { path: 'form-joueur', component: AddJoueurFormComponent},
-    { path: 'details/:id', component: DetailsJoueurComponent}
+    { path: 'joueur/:id', component: DetailsJoueurComponent}
 ];
