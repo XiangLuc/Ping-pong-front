@@ -1,8 +1,8 @@
 export interface Joueur {
-    _id: number;
-    categorie: { age: number, niveau: string }[];
+    _id: string;
     nom: string;
-    point: number;
     prenom: string;
+    categorie: { age: number; niveau: string };
     sexe: string;
+    point: number;
 }  

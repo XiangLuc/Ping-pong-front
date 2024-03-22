@@ -12,7 +12,8 @@ import { JoueurService } from '../joueur.service';
 export class AddJoueurFormComponent implements OnInit {
 
   newJoueur: any = {
-    categorie: { age: null, niveau: null }
+    categorie: { age: null, niveau: null },
+    point: 0 
   };
 
   constructor(private joueurService: JoueurService) {}
@@ -25,7 +26,8 @@ export class AddJoueurFormComponent implements OnInit {
       (response) => {
         console.log('Joueur ajouté avec succès:', response);
         this.newJoueur = {
-          categorie: { age: null, niveau: null }
+          categorie: { age: null, niveau: null },
+          point: 0
         };
       }
     );
