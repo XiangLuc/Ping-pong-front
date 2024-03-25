@@ -11,15 +11,15 @@ export class JoueurService {
   constructor(private httpClient: HttpClient) { }
 
   getAllJoueurs(): Observable<Joueur[]> {
-    return this.httpClient.get<Joueur[]>('http://127.0.0.1:5000/joueurs');
+    return this.httpClient.get<Joueur[]>('/api/joueurs');
   }
 
   addJoueur(joueurJSON: JSON) {
-    return this.httpClient.post<JSON>('http://127.0.0.1:5000/joueurs/add', joueurJSON);
+    return this.httpClient.post<JSON>('/api/joueurs/add', joueurJSON);
   }
 
   getJoueurById(id: string) {
-    return this.httpClient.get<Joueur>(`http://127.0.0.1:5000/joueurs/${id}`);
+    return this.httpClient.get<Joueur>(`/api/joueurs/${id}`);
   }
   
 }

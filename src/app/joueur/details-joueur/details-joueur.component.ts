@@ -18,9 +18,13 @@ export class DetailsJoueurComponent {
 
   constructor(private joueurService: JoueurService, activateRoute: ActivatedRoute) {
     this.id = activateRoute.snapshot.params['id'];
+  
     this.joueurService.getJoueurById(this.id).subscribe(
-      (joueur:Joueur) => {
-        this.joueur = joueur;
+      (res:Joueur) => {
+        this.joueur = res;
+      },
+      (error) => {
+        console.log("Erreur : ",error)
       }
     )
   }

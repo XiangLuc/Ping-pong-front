@@ -23,10 +23,19 @@ export class JoueurListComponent implements OnInit {
 
   getAllJoueurs() {
     this.joueurService.getAllJoueurs().subscribe(
-      (joueurs:any) => {
-        this.joueurs = joueurs;
+      (res) => {
+        this.joueurs = res;
+        console.log(res)
+      },
+      (err) => {
+        console.log("Erreur :", err);
       }
-    )
+    );
+  }
+  
+
+  onClickOpenDetails(joueur: Joueur) {
+    //this.router.navigate(['/joueur',joueur._id]);
   }
   
 }

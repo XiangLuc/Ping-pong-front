@@ -43,6 +43,9 @@
             <div class="col-12">
               <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()">Créer Joueur</button>
             </div>
-          </form>          
+          </form> 
+          <div *ngIf="message">
+              <p> {{ message.message }} /p>
+          </div>         
     </div>
 </div>
