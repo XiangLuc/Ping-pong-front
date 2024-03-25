@@ -2,6 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { JoueurService } from '../joueur.service';
 import { Joueur } from '../model/Joueur';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-joueur-list',
@@ -12,7 +13,7 @@ import { Joueur } from '../model/Joueur';
 })
 export class JoueurListComponent implements OnInit {
 
-  constructor(private joueurService: JoueurService) {}
+  constructor(private joueurService: JoueurService, private router: Router) {}
 
   joueurs: Joueur[] = [];
 
@@ -35,7 +36,7 @@ export class JoueurListComponent implements OnInit {
   
 
   onClickOpenDetails(joueur: Joueur) {
-    //this.router.navigate(['/joueur',joueur._id]);
+    this.router.navigate(['/joueur',joueur._id]);
   }
   
 }
