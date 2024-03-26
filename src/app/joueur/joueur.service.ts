@@ -18,7 +18,7 @@ export class JoueurService {
     return this.httpClient.post<JSON>('/api/joueurs/add', joueurJSON);
   }
 
-  getJoueurById(id: string) {
+  getJoueurById(id: string): Observable<Joueur> {
     return this.httpClient.get<Joueur>(`/api/joueurs/${id}`);
   }
   
