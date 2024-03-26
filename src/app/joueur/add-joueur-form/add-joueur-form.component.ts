@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { JoueurService } from '../joueur.service';
 import { NgIf } from '@angular/common';
+import { NewJoueur } from '../model/Joueur';
 
 @Component({
   selector: 'app-add-joueur-form',
@@ -14,10 +15,14 @@ export class AddJoueurFormComponent implements OnInit {
 
   response:any|undefined = undefined;
 
-  newJoueur: any = {
-    categorie: { age: null, niveau: null },
-    point: 0 
+  newJoueur: NewJoueur = {
+    nom: "",
+    prenom: "",
+    categorie: { age: 0, niveau: "" },
+    point: 0,
+    sexe: ""
   };
+
 
   constructor(private joueurService: JoueurService) {}
 
@@ -30,15 +35,25 @@ export class AddJoueurFormComponent implements OnInit {
         this.response = response;
         console.log('Joueur ajouté avec succès:', response);
         this.newJoueur = {
-          categorie: { age: null, niveau: null },
-          point: 0
+          nom: "",
+          prenom: "",
+          categorie: { age: 0, niveau: "" },
+          point: 0,
+          sexe: ""
         };
+      
       }
     );
   }
 
   isFormValid(): boolean {
-    return this.newJoueur.nom && this.newJoueur.prenom && this.newJoueur.categorie?.age && this.newJoueur.categorie?.niveau && this.newJoueur.sexe;
+    return (
+      this.newJoueur.nom.trim() !== "" 
+      && this.newJoueur.prenom.trim() !== "" 
+      && this.newJoueur.categorie.age !== null
+      && this.newJoueur.categorie.niveau.trim() !== ""
+      && this.newJoueur.sexe.trim() !== ""
+    );
   }
 
 }

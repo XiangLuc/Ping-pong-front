@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Joueur } from './model/Joueur';
+import { Joueur, NewJoueur } from './model/Joueur';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class JoueurService {
     return this.httpClient.get<Joueur[]>('/api/joueurs');
   }
 
-  addJoueur(joueurJSON: JSON) {
-    return this.httpClient.post<JSON>('/api/joueurs/add', joueurJSON);
+  addJoueur(newJoueur: NewJoueur): Observable<NewJoueur> {
+    return this.httpClient.post<NewJoueur>('/api/joueurs/add', newJoueur);
   }
 
   getJoueurById(id: string): Observable<Joueur> {
