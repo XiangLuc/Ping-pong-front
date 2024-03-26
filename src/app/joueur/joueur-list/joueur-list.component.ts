@@ -22,7 +22,7 @@ export class JoueurListComponent implements OnInit {
    console.log(this.joueurs)
   }
 
-  getAllJoueurs() {
+  getAllJoueurs(): void {
     this.joueurService.getAllJoueurs().subscribe(
       (res) => {
         this.joueurs = res;
@@ -35,7 +35,7 @@ export class JoueurListComponent implements OnInit {
   }
   
 
-  onClickOpenDetails(joueur: Joueur) {
+  onClickOpenDetails(joueur: Joueur): void {
     this.router.navigate(['/joueur',joueur._id]);
   }
   
