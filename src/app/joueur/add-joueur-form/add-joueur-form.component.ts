@@ -12,7 +12,7 @@ import { NgIf } from '@angular/common';
 })
 export class AddJoueurFormComponent implements OnInit {
 
-  message:any = undefined;
+  response:any|undefined = undefined;
 
   newJoueur: any = {
     categorie: { age: null, niveau: null },
@@ -27,7 +27,7 @@ export class AddJoueurFormComponent implements OnInit {
 
     this.joueurService.addJoueur(this.newJoueur).subscribe(
       (response) => {
-        this.message = response;
+        this.response = response;
         console.log('Joueur ajouté avec succès:', response);
         this.newJoueur = {
           categorie: { age: null, niveau: null },
