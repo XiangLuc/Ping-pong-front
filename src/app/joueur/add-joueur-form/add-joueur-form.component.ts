@@ -24,7 +24,7 @@ export class AddJoueurFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addJoueur() {
+  addJoueur(): void {
 
     this.joueurService.addJoueur(this.newJoueur).subscribe(
       (response) => {
@@ -39,7 +39,7 @@ export class AddJoueurFormComponent implements OnInit {
     );
   }
 
-  isFormValid() {
+  isFormValid(): boolean {
     return this.newJoueur.nom && this.newJoueur.prenom && this.newJoueur.categorie?.age && this.newJoueur.categorie?.niveau && this.newJoueur.sexe;
   }
 
