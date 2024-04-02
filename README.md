@@ -1,1 +1,9 @@
-# Ping-pong-front
+![creer_tournoi](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/0d361c55-588c-487a-b380-7f0916f3ea64)# Ping-pong-front![Uplo![liste_tournoi](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/cf13b88e-4d24-420c-a173-316be96bde04)
+![liste_joueur_et_import_csv](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/81fd9e00-0ad6-4535-9ea5-67866555b329)
+![form_joueur](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/8765dd90-bc4b-4e5e-bbe2-e3b6024c0653)
+![détails_tournoi_3](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/d80857e9-84ac-43b7-95cc-4d12b765ba3f)
+![détails_tournoi_1](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/00a85a72-d199-490c-9b23-7907fcde71a7)
+![détail_tournoi_2](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/ce9bb9f6-54fe-4787-9859-57187918c7b7)
+![creer_tournoi_3](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/cab20b00-dc32-48fe-8536-e2e648a83c82)
+![creer_tournoi_2](https://github.com/XiangLuc/Ping-pong-front/assets/101273350/71621eef-5e57-4fbb-994f-5413d257556e)
+ading creer_tournoi.png…]()
